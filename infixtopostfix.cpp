@@ -19,12 +19,12 @@ string postfixToInfix(string postfix) {
       string op; 								// Temporary string to store the operand
       while (isOperand(c)) { 					// Append the digits to the operand string
         op = c;
-        s.push(op);
+        s.push(op); 							// Push the operand string to the stack change string to integer
         i++;
         c = postfix[i];
       }
       i--; 									// Decrement i to avoid skipping a character
-    										// Push the operand string to the stack
+   
     }
     else { 									// If the character is an operator
       string op1 = s.top(); s.pop(); 		// Pop two sub-expressions from the stack
